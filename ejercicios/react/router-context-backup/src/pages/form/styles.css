@@ -1,0 +1,52 @@
+
+h3{
+    font-size: x-large;
+    font-weight:700;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+label, input, select, p {
+    font-size: 1.5rem;
+}
+
+input, p, select{
+    border:none;
+    font-family: 'News Cycle', sans-serif;
+    text-align: center;
+    font-style: italic;
+}
+
+p {
+    color: red;
+}
+
+
+.submitBtn {
+    border-radius: 1rem;
+    background-color: #f974a1;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+#formPage {
+    text-align: center;
+    display: flex;
+    margin: 0.5rem; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+#form {
+    border-radius: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+

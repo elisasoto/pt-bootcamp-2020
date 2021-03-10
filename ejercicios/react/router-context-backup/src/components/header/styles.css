@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: sticky;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+}
+
+.menu {
+    padding: 0;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #161919;
+}
+
+

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  size: 16rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.App{
+  margin-bottom: 80px;
+}
+
+
+
+p {
+  color: red;
+}
+
+form {
+  border: 1px solid lightgray;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+  font-size: 15px;
+}
+
+
+#submitBtn {
+  background-color: #FACA66;
+  border-radius: 1rem;
+  border: thin;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cousine', monospace;
+}
+
+h1 {
+	background-color: #4F8B89;
+	color: white;
+	text-align: center;
+}
+
+input {
+  line-height: 10px;
+  padding: 20px 10px;
+}
+
+button:disabled {
+	border-radius: 20px;
+	padding: 10px 20px; 
+	font-size: 10px;
+	cursor: default; 
+	opacity: 0.7;
+}
+
+button:enabled {
+	background-color: #62A07B;
+	color: white;
+	border-radius: 10px;
+	padding: 10px 20px; 
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.deleteButton {
+	border-radius: 20px;
+	padding: 10px 20px; 
+	font-size: 10px;
+	background-color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.todo-card{
+	border-radius: 20px;
+	border: 1px solid #536C8D;
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}

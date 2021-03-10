@@ -1,0 +1,9 @@
+.userDetails {
+    border-radius: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+}

@@ -1,0 +1,31 @@
+h6 {
+    position: absolute;
+    right: 80px;
+    top: 0px;
+}
+
+.nav a {
+    position: absolute;
+    right: -100px;
+    transition: 0.3s;
+    padding: 10px 40px 10px 10px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+.nav a:hover {
+    right: 0;
+}
+
+#home {
+    top: 20px;
+    background-color: #FACA66;
+}
+
+#create {
+    top: 80px;
+    background-color: #FACA66;
+}

@@ -1,0 +1,38 @@
+h4 {
+    text-transform: capitalize;
+    font-size: 30px;
+    text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+.userCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: transparent;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 18rem;
+    height: 100px;
+    background-color: #edebe6;
+    margin: 0.5rem;
+}
+
+#userDetailsLink {
+    color: white;
+}
+
+#userDetailsbtn {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #f974a1;
+    font-size: x-large;
+}
+

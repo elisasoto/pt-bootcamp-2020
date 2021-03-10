@@ -1,0 +1,90 @@
+img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5%;
+  }
+  
+  input {
+    border-radius: 1rem;
+    border: 1px solid grey;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+  }
+  
+  .pokemon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #FCCA55;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+  
+  .pokemon-card, .pokemonProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: transparent;
+    border-radius: 1rem;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 18rem;
+    height: auto; 
+    background-color: white;
+    margin: 0.5rem;
+  }
+  
+  .deletebtn {
+    background-color: red;
+    border-radius: 50%;
+    border: transparent;
+    color: white;
+    padding: 2%;
+    cursor: pointer;
+  }
+
+  #searchbtn:enabled {
+    background-color: #FACA66;
+    border-radius: 1rem;
+    border: thin;
+    cursor: pointer;
+  }
+  
+  #searchbtn:disabled {
+    background-color: #FACA66;
+    opacity: 0.75;
+    border-radius: 1rem;
+    border: thin;
+  }
+  
+  #backListButton, #profileLink {
+      background-color: green;
+      color: white;
+      border-radius: 5%;
+      font-size: small;
+      padding: 10% 10% 10% 10%;
+      text-align: center;
+  }
+
+  #pokemonProfileLink {
+    text-decoration: none;
+    padding: 5%;
+}

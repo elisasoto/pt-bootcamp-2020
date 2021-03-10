@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #EDEBE6;
+    font-family: 'News Cycle', sans-serif;
+    display:flex;
+    justify-content: center;
+}
+
+
+
