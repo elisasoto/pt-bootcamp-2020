@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-weight: 300;
+    background-color: black;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  /* Estilos Bulb */
+  .center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .bulb{
+    width: 100px;
+    height: 100px;
+    border: 2px #c3aa00;
+    border-radius: 50%;
+    transition: background 500ms linear;
+  }
+  
+  .bulb-off {
+    background: lightgrey;
+    border: 1px solid grey;
+    transition: background 500ms linear;
+  }
+  .bulb-on {
+    background: yellow;
+  }
+  
+  
+  .bulb-down {
+    width: 50px;
+    height: 30px;
+    background-color: lightgray;
+    transform: translateY(-0.25rem);
+  }
+  
+  
+  /* Estilos de la toggle */
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toggle{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(0.30rem, 0.25rem);
+  }
+  
+  .toggle-off{
+    background: white;
+  }
+  
+  .toggle-on{
+    transform: translate(1.30rem, 0.25rem);
+    background: #00ff00;
+  }
+  
+  #toggle-container{
+    width: 50px;
+    height: 30px;
+    border-radius: 34px;
+    background: lightgray;
+  }

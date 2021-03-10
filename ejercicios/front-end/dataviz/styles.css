@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Definimos una clase para poner ancho máximo en nuestras gráficas */
+  .ct-golden-section {
+    max-width: 750px;
+    margin: 0 auto;
+  }
