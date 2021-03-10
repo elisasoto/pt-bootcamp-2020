@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+    border: 1px solid grey;
+    margin: auto; 
+    padding: 10px;
+}
+
+#input {
+    text-align: center;
+}
+
+#gotoButton {
+    margin: 0 auto;
+    display: block;
+}
