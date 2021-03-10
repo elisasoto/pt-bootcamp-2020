@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Hacer la cena",
+    "category": 1,
+    "description": "Quiero comer burritos"
+  },
+  {
+    "id": 2,
+    "title": "Mejor 200km",
+    "category": 2,
+    "description": "Por si no han tenido suficiente"
+  },
+  {
+    "id": 3,
+    "title": "Ir a un monólogo",
+    "category": 3,
+    "description": "Ver a Dani Rovira"
+  },
+  {
+    "id": 4,
+    "title": "Llorar mientras programo",
+    "category": 4,
+    "description": "Aprender Python en un día"
+  },
+  {
+    "id": 5,
+    "title": "Hacer la tarea",
+    "category": 4,
+    "description": "A trabajar con CC"
+  },
+  {
+    "id": 6,
+    "title": "Ir al cine",
+    "category": 3,
+    "description": "A ver Wonderwoman"
+  },
+  {
+    "id": 7,
+    "title": "Jugar al padel",
+    "category": 2,
+    "description": "Cristian te estamos esperando"
+  },
+  {
+    "id": 8,
+    "title": "Hacer croquetas",
+    "category": 1,
+    "description": "Cooking Time"
+  },
+  {
+    "id": 9,
+    "title": "Ir a Cercedilla",
+    "category": 3,
+    "description": "Elisaaa ya voyy!!"
+  },
+  {
+    "id": 10,
+    "title": "Comida navideña",
+    "category": 1,
+    "description": "Comprar las pizzas"
+  },
+  {
+    "id": 11,
+    "title": "Ir al teatro",
+    "category": 5,
+    "description": "Ver una buena actuación"
+  },
+  {
+    "id": 12,
+    "title": "Certificarme en CSS",
+    "category": 6,
+    "description": "Ser un dios en CSS"
+  }
+]

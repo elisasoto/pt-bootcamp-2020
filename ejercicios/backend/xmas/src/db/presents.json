@@ -1,0 +1,16 @@
+[
+    { "name": "Sol", "presents": ["coffee", "holidays"], "present": "sock", "score": 10 },
+    { "name": "Molpe", "presents": ["coffee", "coal"], "present": "sock", "score": 2.3 },
+    { "name": "Zineb", "presents": ["computer", "coal"], "present": "coal", "score": 4.5 },
+    { "name": "David", "presents": ["clothes", "car"], "present": "sock", "score": 9.8 },
+    {
+      "name": "Dani",
+      "presents": ["clothes", "videogames", "coal"],
+      "present": "coal",
+      "score": 5.5
+    },
+    { "name": "Elisa", "presents": ["phone", "holidays"], "present": "sock", "score": 8.75 },
+    { "name": "Fernando", "presents": ["motorbike", "coal"], "present": "sock", "score": 3.5 },
+    { "name": "Silvia", "presents": ["phone", "motorbike", "coal"], "present": "coal", "score": 6.5 },
+    { "name": "Isabel", "presents": ["tattoo", "car"], "present": "sock", "score": 9.25 }
+  ]

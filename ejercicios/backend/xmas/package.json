@@ -1,0 +1,32 @@
+{
+  "name": "xmas",
+  "version": "1.0.0",
+  "description": "Ahora que se acercan las navidades vamos a tener que hacer un ejercicio con `Node` y `Express` para ayuda a `Santa Claus` a organizar los regalos para un listado de niños que han enviado su carta a última hora 🎅🏼",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elisasoto/xmas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elisasoto/xmas/issues"
+  },
+  "homepage": "https://github.com/elisasoto/xmas#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0"
+  }
+}
