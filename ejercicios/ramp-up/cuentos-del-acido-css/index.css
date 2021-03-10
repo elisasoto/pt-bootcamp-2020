@@ -1,0 +1,123 @@
+:root {
+    --main-font-fam: 'Averia Gruesa Libre', cursive;
+    --bck-color-font: white;
+}
+
+#psych {
+    position: absolute;
+    z-index: -1;
+    animation: psych 3s linear infinite;
+    height: auto;
+    opacity: 70%;
+}
+  
+  @keyframes psych {
+    100% {
+      -webkit-filter: hue-rotate(360deg);
+    }
+  }
+
+div {
+    height: max-content;
+    text-align: center;
+    align-content: stretch;
+}
+
+.container{
+    width: 500px;
+    height: 600px;
+    padding: 2%;
+    text-align: center;
+    margin-left: 30%;
+}
+
+body {
+    font-family: var(--main-font-fam);
+    color: var(--bck-color-font);
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    background-color: chartreuse;
+ }
+    
+}
+
+img {
+    max-width: auto;
+    height: auto;
+    filter: drop-shadow(5px 4px 5px white);
+    
+}
+
+.bueno {
+    transform: translateX(0px);
+    animation-name: bueno;
+    animation-duration: 2s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bueno {
+    0% {left:0px; top:0px;}
+  50%  {left:50px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
+.inanimado {
+    transform: rotate(-45deg);
+    animation-name: inanimado;
+    animation-duration: 2s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+
+@keyframes inanimado 
+    { 50% { transform: rotate(-45deg); 
+        transform:rotate(45deg); } }
+
+#bruja {
+    animation: bruja 2s infinite alternate;
+}
+
+@keyframes bruja {
+    from {
+       transform: skew(20deg,10deg);
+    }
+    to {
+       transform: skew(-20deg,-10deg);
+    }
+}
+
+#dragon {
+    animation: dragon 2s infinite alternate;
+ }
+
+ @keyframes dragon {
+     from {
+        transform: scale(2,2);
+     }
+     to {
+        transform: scale(1,1);
+     }
+ }
+
+ #nomo {
+    animation: gnomo 2s infinite;
+ }
+
+  @keyframes gnomo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  p {
+        background-color: deeppink;
+  }

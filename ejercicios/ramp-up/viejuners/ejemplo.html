@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Formulario Policia</title>
+</head>
+<body>  
+
+    <h1>Los ladronzuelos de bicicletas</h1>
+    <form>
+        <label for="fecha">Día:</label>
+        <input type="date" id="fecha" name="fecha" placeholder="20/03/2020"><br><br>
+
+        <label for="hour">Hora:</label>
+        <input type="time" id="hour" name="hour"><br><br>
+
+        <label for="color">Color de la bicicleta:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="precio">Rango de precio (Entre 100€-1000€):</label>
+        <input type="Range"  id="precio" name="precio"min="100€" max="1000€"><br><br><br>
+
+        <fieldset>
+            <legend>Tipo de Bicicleta:</legend>
+
+        <input type="radio" id="paseo" name="tipo" value="paseo">
+        <label for="paseo">Paseo</label>
+        <select name="tipo" id="paseo">
+            <option value="ninguno"></option>
+            <option value="señorial">Señorial</option>
+            <option value="anti-pleve">Anti-Plebeyos</option>
+            <option value="PorEncimadelHombro">PorEncimadelHombro</option>
+        </select><br><br>
+
+        <input type="radio" id="montaña" name="tipo" value="montaña">
+        <label for="montaña">Montaña</label>
+        <select name="tipo" id="paseo">
+            <option value="ninguno"></option>
+            <option value="gamusinos">Gamusinos</option>
+            <option value="huele-flores">HueleAflores</option>
+            <option value="Lodo-lovers">Lodo-lovers</option>
+        </select><br><br>
+
+
+        <input type="radio" id="carreras" name="tipo" value="carreras">
+        <label for="carreras">Carreras</label>
+        <select name="tipo" id="paseo">
+            <option value="ninguno"></option>
+            <option value="tresymedio">Tresy-medio</option>
+            <option value="grupitos">Grupitos</option>
+            <option value="fluoredition">Fluor-edition</option>
+        </select><br><br>
+</fieldset><br><br>
+
+        <label for="accesorios">Accesorios:</label><br>
+        <select name="accesorios" id="accesorios">
+            <option value=""></option>
+            <option value="ruedines">Ruedines</option>
+            <option value="pegatinas">Pegatinas</option>
+            <option value="cestita">Cestita</option>
+            <option value="bombadeaire">Bomba de aire</option>
+            <option value="timbre">Timbre</option>
+            <option value="foco">Foco</option>
+        </select><br><br>
+
+       <label for="marca">¿Qué marca era?:</label><br>
+        <input list="marca" name="marca">
+        <datalist id="marca">
+            <option value="specialized">specialized</option>
+            <option value="trek">trek</option>
+            <option value="merida">merida</option>
+            <option value="scott">scott</option>
+            <option value="giant">giant</option>
+            <option value="cube">cube</option>
+            <option value="lapierre">lapierre</option>
+        </datalist><br><br>
+
+            <input type="Submit" name="Enviar">
+
+    </form>
+
+</body>
+</html>

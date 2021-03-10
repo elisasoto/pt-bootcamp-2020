@@ -1,0 +1,66 @@
+/* here we have all the selectors for elements*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #edf6f9;
+    padding: 180px;
+    line-height: 1.6;
+}
+
+h2 {
+   color: #023047; 
+   font-weight: bolder;
+   word-spacing: 5px;
+   
+}
+
+q {
+    quotes: "'" "'";
+}
+
+a{
+    text-decoration: underline overline dotted;
+}
+
+dd {
+    word-wrap: break-word;
+}
+
+
+/*display block ayuda a quitar los br, es una propiedad para que el span
+tomen forma de bloque como los escribimos en el codigo
+
+The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.
+
+*/
+span {
+    display: block;
+}
+
+/* here we have all the selectors for classes*/
+
+.footer{
+    font-size: small;
+}
+
+/* here we have all the selectors for ids*/
+
+#date {
+       writing-mode: vertical-lr;
+       float: right;
+}
+
+#sender {
+    text-align: right;
+}
+
+
+
+#signature {
+    margin-top: 10%;
+}
+
+#greeting {
+    letter-spacing: 2px;
+}
+

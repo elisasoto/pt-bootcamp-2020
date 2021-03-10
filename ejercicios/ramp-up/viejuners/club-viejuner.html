@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Club Viejuner</title>
+    </head>
+<body>
+    <h1>Este es el formulario del club viejuner</h1>
+    
+    <h2>1. Cuéntanos sobre ti</h2>
+    <small>*Campos Obligatorios</small>
+    <br /><br />
+    <form>
+        <label for="first-name">¿Cuál es tu nombre?*</label><br />
+        <input type="text" name="first-name" id="first-name" required placeholder="Maria"/>
+  ​
+        <br /><br />
+
+        <label for="surname">¿Cuál es tu apellido?*</label><br />
+        <input type="text" name="surname" id="surname" required placeholder="Molina"/>
+  ​
+        <br /><br />
+  
+        <label for="edad">¿Cuántos años tienes?</label><br />
+        <input type="number" name="edad" id="edad" placeholder="30" min="15" max="75"/>
+        
+        <br /><br />
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Hombre</label>
+            <br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Mujer</label>
+            
+          </fieldset>
+          <br /><br />
+          
+      <input type="checkbox" id="viejuner1" name="viejuner1" value="yes-viejuner" />
+      <label for="viejuner1">Me siento Viejuner</label>
+      
+      <br /><br />
+
+      <label for="description">Escribe algo sobre ti</label><br />
+      <textarea
+        name="description"
+        id="description"
+        rows="10"
+        cols="50"
+      ></textarea>
+      <br /><br />
+     
+      <h2>2. Tus circunstancias</h2>
+     
+      <form>
+        <label for="email">Proporcionanos tu correo electrónico*</label> <br /> 
+        <input type="email" id="email" name="email" placeholder="mimail@gmail.com" required>
+      </form>
+      <br />
+
+      <form>
+        <label for="phone">Y por último, tu teléfono de contacto:*</label> <br />
+        <input type="tel" id="phone" name="phone" placeholder="123-45-678" min="9" max="12" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+      </form>
+      <br /><br />
+
+      <!-- como hacer para que solo se puedan meter de 9 a 12 caracteres en la casilla?-->
+
+    
+           <input type="submit" value="Enviar mis datos " /> 
+
+</body>
+</html>

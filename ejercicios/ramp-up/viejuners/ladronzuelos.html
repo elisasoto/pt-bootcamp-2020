@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>SISTEMA DE DENUNCIAS PARA ROBO DE BICICLETAS</h1>
+    
+    <h3>Por favor informanos de lo sucedido y describe tu bicicleta</h3>
+   
+
+    <!-- por qué aquí no funciona el placeholder? -->
+    <form>
+        <label for="birthdaytime">¿Cuándo sucedió? (día y hora aproximada):</label><br>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime" placeholder="dd/mm/aa --:-- --" />
+    </form>
+
+    <br><br>
+
+    <form>
+        <label for="favcolor">¿De qué color es tu bicicleta?:</label><br>
+        <input type="color" id="favcolor" name="favcolor">
+      </form>
+
+      <br><br>
+
+      <form>
+        <label for="vol">Cuál es el precio estimado de la bici? (entre $0 y $3,000):</label>
+        <input type="range" id="vol" name="vol" min="0" max="3000">
+      </form>
+      
+    <br><br>
+
+    <fieldset>
+        <legend>Tipo de Bicicleta:</legend>
+
+    <input type="radio" id="paseo" name="tipo" value="paseo">
+    <label for="paseo">Paseo</label>
+    <select name="tipo" id="paseo">
+        <option value="">Selecciona el tipo</option>
+               <option value="señorial">Señorial</option>
+        <option value="anti-pleve">Anti-Plebeyos</option>
+        <option value="PorEncimadelHombro">PorEncimadelHombro</option>
+    </select><br><br>
+
+    <input type="radio" id="montaña" name="tipo" value="montaña">
+    <label for="montaña">Montaña</label>
+    <select name="tipo" id="paseo">
+        <option value="">Selecciona el tipo</option>
+              <option value="gamusinos">Gamusinos</option>
+        <option value="huele-flores">HueleAflores</option>
+        <option value="Lodo-lovers">Lodo-lovers</option>
+    </select><br><br>
+
+
+    <input type="radio" id="carreras" name="tipo" value="carreras">
+    <label for="carreras">Carreras</label>
+    <select name="tipo" id="paseo">
+        <option value="">Selecciona el tipo</option>
+          <option value="tresymedio">Tresy-medio</option>
+        <option value="grupitos">Grupitos</option>
+        <option value="fluoredition">Fluor-edition</option>
+    </select><br><br>
+</fieldset><br><br>
+
+
+    <label for="accesorios">¿Qué accesorios tiene?</label>
+      <!-- El atributo size="2" cambia el desplegable para que veamos las opciones por defecto y hagamos scroll dentro -->
+      <!-- El atributo multiple permite elegir varias opciones usando shift -->
+      <select id="accesorios" name="accesorios" multiple size="6">
+            <option value="Ruedines">Ruedines</option>
+        <option value="Pegatinas">Pegatinas</option>
+        <option value="Cestita">Cestita</option>
+        <option value="Bomba de Aire">Bomba de aire</option>
+        <option value="Timbre">Timbre</option>
+        <option value="Foco">Foco</option>
+      </select>
+
+      <br><br>
+
+      <label for="marca">¿Qué marca era tu bici?</label>
+      <!-- El atributo list relaciona el input de texto con las opciones disponibles -->
+      <input list="marca" placeholder="Trek" />
+      <datalist id="marca">
+        <option value="specialized"></option>
+        <option value="trek"></option>
+        <option value="merida"></option>
+        <option value="scott"></option>
+        <option value="giant"></option>
+        <option value="cube"></option>
+        <option value="lapierre"></option>
+        <option value="orbea"></option>
+        <option value="cannondale"></option>
+        <option value="bmc"></option>
+        <option value="canyon"></option>
+        <option value="look"></option>
+        <option value="protek"></option>
+        <option value="megamo"></option>
+        <option value="pinarello"></option>
+        <option value="bianchi"></option>
+        <option value="bh"></option>
+        <option value="factor"></option>
+        <option value="ghost"></option>
+        <option value="cervélo"></option>
+        <option value="argon"></option>
+      </datalist>
+​
+      <br /><br>
+
+      <input type="submit" value="Enviar mis datos " /> 
+
+</body>
+</html>
