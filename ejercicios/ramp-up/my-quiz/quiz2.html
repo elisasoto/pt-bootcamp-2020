@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>F.R.E.N.D.S QUIZ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="TheBridge">
+    <meta name="description" content="Plantilla simple HTML5">
+
+   <link rel="stylesheet" href="quiz2.css">
+   
+    
+    </head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+    </div>
+    <div class="header">
+       <h2>THE ULTIMATE F.R.I.E.N.DS TRIVIA</h2>
+    </div>
+    <hr>
+    <input type="text" readonly id="timespent" value="0:00">
+
+     
+        <form .class="quiz-form" id="quiz-form" name="quiz-form"> 
+            <div class='questions'>
+                <p class="question-title">1. "The one where all it began" aired on this special date: </p>
+            
+                <img src="https://images.summitmedia-digital.com/esquiremagph/images/2019/09/19/Friends-25th-Year-MAINIMAGE.jpg" alt="friends-episode1" class="q-images" width="400px" height="250px"><br>
+                
+                <input type="radio" id="sept-94" name="airDate" value="sept-94" required>
+                <label for="sept-94">September 22nd, 1994</label><br>
+                
+                <input type="radio" id="oct-92" name="airDate" value="oct-92" required>
+                <label for="oct-92">October 1st, 1992</label><br>
+                
+                <input type="radio" id="jan-90" name="airDate" value="jan-90" required>
+                <label for="jan-90">January 3rd, 1990</label><br>
+            </div>
+
+        
+
+            <div class='questions'>
+                <p class="question-title">2. What was Chandler Bing´s Job before switching to advertising?</p>
+            
+                <img src="https://i.imgur.com/hW380lm.gif" alt="monica-rachel-quiz" class="q-images" width="400px" height="200px"><br>
+                
+                <input type="radio" id="Transponster" name="chandlerJob" value="Transponster" required>
+                <label for="Transponster">Transponster</label> <br>
+                
+                <input type="radio" id="statistics-data" name="chandlerJob" value="statistics-data" required>
+                <label for="statistics-data">Statistical Analysis & Data reconfiguration</label> <br>
+                
+                <input type="radio" id="Copy-writer" name="chandlerJob" value="Copy-writer" required>
+                <label for="Copy-writer">Copy-writer</label>
+            </div>
+
+            <div class='questions'>
+                <p class="question-title">3. Pick all Ross Geller's wives</p>
+            
+                <input type="checkbox" id="charlie" name="charlie" value="charlie">
+                <label for="charlie">Charlie Wheeler</label>
+                <input type="checkbox" id="rachel" name="rachel" value="rachel">
+                <label for="rachel">Rachel Green</label>
+                <input type="checkbox" id="emily" name="emily" value="emily">
+                <label for="emily">Emily Waltham</label>
+                <input type="checkbox" id="mona" name="mona" value="mona">
+                <label for="mona">Mona</label>
+                <input type="checkbox" id="elisabeth" name="elisabeth" value="elisabeth">
+                <label for="elisabeth">Elisabeth Stevens</label>
+                <input type="checkbox" id="carol" name="carol" value="carol">
+                <label for="carol">Carol Willick</label>
+            </div>
+
+            <div class='questions'>
+                <p class="question-title">4. What is the name of Chandler´s father show in "Las Vegas"?</p>
+            
+                <img src="https://i.pinimg.com/564x/e9/be/1f/e9be1f8d17312f4ef25ad5751d5f22c0.jpg" alt="drag-queen" class="q-images" width="400px" height="300px"><br>
+                
+                <input type="radio" id="draggys" name="vegasShow" value="draggys" required>
+                <label for="draggys">Draggy´s Show Tonight</label> <br>
+                
+                <input type="radio" id="gaygas" name="vegasShow" value="gaygas" required>
+                <label for="gaygas">Viva las Gaygas</label> <br>
+                
+                <input type="radio" id="dancequeen" name="vegasShow" value="dancequeen" required>
+                <label for="dancequeen">Vegas Dancing Queen Parade</label> <br>
+            </div>
+
+            <div class='questions'>
+                <p class="question-title">5. Who is she?</p>
+            
+            
+                <iframe src="https://giphy.com/embed/Uqe8kJ7uFZ87zp4coo" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
+                
+                <input type="radio" id="roomate" name="cousinCassie" value="roomate" required>
+                <label for="roomate">Joey's Australian Roomate</label> <br>
+                
+                <input type="radio" id="bonie" name="cousinCassie" value="bonie" required>
+                <label for="bonie">Bonie, Ross´s (bald) ex-girlfriend</label> <br>
+                
+                <input type="radio" id="cassie" name="cousinCassie" value="cassie" required>
+                <label for="cassie">Cousin Cassie</label> <br>
+            </div>
+            <button class="btn" type="submit">Check my answers!</button>
+
+            <p id="quizresult"> </p>
+        </form>
+        
+        <p>Your final score is: <span id="score">__</span></p><p id="score2"></p>
+
+        <form id="client-data">
+            <div>
+                <p>Leave us your contact to get more quizes like this one</p>
+                <label for="client-name">Your Name:</label>
+                <input type="text" id="client-name" required placeholder="My name is..."/><br>
+                <label for="client-surname">Your Surname:</label>
+                <input type="text" id="client-surname" required placeholder="My lastname is..."/><br>
+                <label for="client-email">Your email:</label>
+                <input type="text" id="client-email" required placeholder="suscriptor@gmail.com"/><br>
+                <button class="btn" type="submit">Subscribe</button>
+            </div>
+           
+        </form>
+
+        
+            
+        <script defer src="./quiz2.js"></script>
+
+</body>
+</html>
