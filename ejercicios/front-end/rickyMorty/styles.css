@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    text-align: center;
+    background: url('https://cutewallpaper.org/21/rick-and-morty-hd-wallpapers/Rick-And-Morty-HD-Wallpapers-for-desktop-download.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.44);
+}
+
+.grid-img {
+    border-radius: 10%;
+}
+
+#next-button {
+	background-color:#f0f00e;
+	border-radius:28px;
+	border:1px solid #6c7353;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+#next-button:hover {
+	background-color:#706a00;
+}
+#next-button:active {
+	position:relative;
+	top:1px;
+}
+
+.char-location {
+    text-align: center;
+}
+
+.headline, .bottom{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    justify-content: space-between;
+}
+
+.char-name{
+    background-color: #fff3acc2;
+    background-image: linear-gradient(to right, #ffe359dd 0%, #fff2ac 100%);
+    box-shadow: 10px 10px 5px #e9dfdf;
+}
+
+.bottom {
+    border-bottom: 1px dotted rgb(71, 26, 103);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.headline {
+    border-top: 1px dotted rgb(71, 26, 103);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.char-status, .chargender{  
+    display: flex;
+    justify-content: space-between;
+}
+
+.char-status{  
+    border-radius: 20%;
+    padding: 5px;
+    background-color: rgba(145, 225, 225, 0.694);
+    box-shadow: 10px 10px 5px #e9dfdf;
+}
+
+.character-card{
+    width: 300px;
+    padding: 1%;
+    margin: 0.5rem;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px #e9dfdf;
+    background: rgb(177, 173, 173);
+    background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(189, 183, 175, 0.872) 100%);
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+}
+
+.container{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+
+
+  .character-card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+
+  /* styles personaje unico */
+
+  a {
+    color: rgba(102, 174, 198, 0.892);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.851);
+    font-size: 25px;
+  }
+  
+  #name{
+    background-color: #fff3acc2;
+      background-image: linear-gradient(to right, #ffe359dd 0%, #fff2ac 100%);
+      box-shadow: 10px 10px 5px #e9dfdf;
+      font-size: 25px;
+  }
+  
+  .char-img {
+    border-radius: 10%;
+  }
+  
+  .card-image {
+    width: fit-content;
+    margin: 0.5rem;
+  }
+  
+  .char-id{
+    display:flex;
+    justify-content: space-around;
+    flex-grow: 4;
+  }
+  
+  .img-loc-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .location {
+    font-size: 25px;
+    display: table;
+    text-align: center;
+  }
+    
+    .card {
+      border: 12px solid #E8BF56;
+      background-color: azure;
+      margin-top: 20px;
+      width: 800px;
+      height: 500px;
+      border-radius: 5%;
+      box-shadow: 10px 10px 5px #e9dfdf;
+      background: rgb(177, 173, 173);
+      background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(189, 183, 175, 0.872) 100%);
+  
+      
+    }
+  
+    .container{
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      overflow: hidden;
+    }
+    
+    .card-status {
+    
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      background: #E8BF56;
+      font-size: 30px;
+     
+    }
+  
+    .card-status .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      padding:10px;
+    }
+  
+
+    .link {
+      display: inline-block;
+      border-radius: 50%;
+      background-color: rgb(207, 225, 12);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1rem;
+  }
+  .link:hover {
+      color: rgba(55, 220, 55, 0.913);
+      transform: scale(1.2);
+  }
+  .for-css {
+      text-align: right;
+      margin-top: 0.25rem;
+  }
