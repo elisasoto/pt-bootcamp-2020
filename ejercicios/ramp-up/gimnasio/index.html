@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+</head>
+<body>
+    <nav>
+        <a href="gatitos.html" target="_blank">Visitar Gatitos</a> 
+      </nav>
+
+    <style>
+        table {
+            height: 400px;
+  }
+        table, th, td {
+            width: 700px;
+            border: 2px solid black;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: left;
+            padding: 0px 1px 1px 8px;
+            border-collapse: collapse;
+        }
+
+                address {
+                    padding: 0px 0px 0px 7px;
+            font-style: normal;
+        }
+        #invoice, #description, #subtotal, #tax, #gtotal {
+            background-color: gainsboro;
+        }
+    </style>
+<pre>
+    <table>
+
+        <tr id="invoice">
+          <th colspan="3">Invoice #123456789</th>
+          <th colspan="2">14 January 2025</th>
+        </tr>
+
+        <tr>
+            <td colspan="2"><address><strong>Pay to:</strong>
+Acme Billing Co. 
+123 Main St.
+Cityville, NA 12345</adress></td>
+
+<td colspan="2"><address><strong>Customer:</strong>
+Josh Smith 
+321 Willow Way 
+Southeast Nortwesternshire, MA 54321
+</address></td>
+        </tr>
+        
+        <tr id="description">
+            <th>Name/Description</th>
+            <th>Qty.</th>
+            <th>@</th>
+            <th>Name/Description</th>
+        </tr>
+
+        <tr>
+            <td>Paperclips</td>
+            <td>1,000</td>
+            <td>0.1</td>
+            <td>10.00</td>
+        </tr>
+
+        <tr>
+            <th colspan="3" id="subtotal">Subtotal</th>
+            <td>110.00</td>
+        </tr>
+
+        <tr>
+            <th id="tax" colspan="2">Tax</th>
+            <td>8%</td>
+            <td>8.80</td>
+        </tr>
+
+        <tr>
+            <th colspan="3" id="gtotal">Grand Total</th>
+            <td>$118.80</td>
+        </tr>
+
+
+    </table>
+</pre>
+</body>
+</html>
