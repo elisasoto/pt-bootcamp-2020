@@ -1,0 +1,41 @@
+@import "../../../styles/common.scss";
+
+$width: 2em;
+$height: $width/2;
+$color_switch--on: green;
+$color_switch--off: lightgray;
+$transition: 300ms linear;
+
+.switch {
+  @include box-commons;
+  width: $width * 1.5;
+  height: $height;
+  position: relative;
+  padding: 1%;
+  &--on {
+    background-color: $color_switch--on;
+  }
+
+  &--off {
+    background-color: $color_switch--off;
+    transition: $transition ;
+  }
+
+  .switchbtn {
+    width: $width/2;
+    height: $height;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 4px -2px;
+    &--on {
+        left: 35px ;
+        background-color: lightseagreen;
+      }
+    
+      &--off {
+        transition: $transition;
+    }
+  }
+}
+

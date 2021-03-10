@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruluko&display=swap');
+
+$font: 'Ruluko', sans-serif;
+
+@mixin tester {
+  border:  1px solid black;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin center-flex {
+  @extend .flex;
+  justify-content: center;
+}
+
+@mixin between-flex {
+  @extend .flex;
+  justify-content: space-between;
+}
+
+@mixin evenly-flex {
+  @extend .flex;
+  justify-content:space-evenly;
+}
+
+@mixin box-commons {
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px -2px;
+}
+
+@mixin wrap-flex {
+  @extend .flex;
+  flex-wrap: wrap;
+}
+
+@mixin color-commons {
+  background-color: #73626E;
+}
+
+

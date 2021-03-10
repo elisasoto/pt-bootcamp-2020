@@ -1,0 +1,14 @@
+@import "../../styles/common.scss";
+
+.cards-container{
+    @include center-flex;
+    @include wrap-flex;
+}
+
+.card{
+    @include box-commons;
+    @include center-flex;
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+}

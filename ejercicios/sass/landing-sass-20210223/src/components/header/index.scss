@@ -1,0 +1,27 @@
+@import "../../styles/common.scss";
+
+a{  
+    margin: 5px;
+    color: white;
+    font-size: x-large;
+}
+
+.header-container{
+    @include color-commons;
+    padding: 15px;
+    @include between-flex;
+}
+
+.logo-container{
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    @include center-flex;
+}
+
+.navbar {
+    width: 550px;
+    @include between-flex
+}
+

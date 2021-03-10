@@ -1,0 +1,8 @@
+@import "../../styles/common.scss";
+
+
+.footer-container{
+    color: white;
+    @include center-flex;
+    @include color-commons;
+}
