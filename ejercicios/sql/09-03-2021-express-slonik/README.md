@@ -56,8 +56,8 @@
 4. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen canadiense.
 5. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen británico-estadounidense (vigila cómo están guardados esos datos. Tienen que ser las dos cosas juntas)
 6. Devuelve `query_name`, nacionalidad y roles de aquellos directores que sean ajedrecistas
-7. Devuelve `query_name`, `name` y nacionalidad de aquellos directores que tengan, al menos, dos nacionalidades
-8. Devuelve `query_name` y roles de aquellos directores que tengan más de 3 roles
+***=> 7. Devuelve `query_name`, `name` y nacionalidad de aquellos directores que tengan, al menos, dos nacionalidades
+***=> 8. Devuelve `query_name` y roles de aquellos directores que tengan más de 3 roles
 
 ### Movies
 
