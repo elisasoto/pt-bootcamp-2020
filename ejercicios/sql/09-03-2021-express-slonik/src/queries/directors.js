@@ -81,13 +81,13 @@ const isChessPlayer = async (db) => {
 };
 
 
-// en linea me dan 36 registros, en postman 395
+// en linea me dan 36 registros, en postman 395, hay que recibir y transformar con JS
 const getTwoORMoreNat = async (db) => {
   try {
     return await db.query(sql`
     SELECT query_name, nationality, name
     FROM directors
-    WHERE array_length(regexp_split_to_array(nationality, '\s+'), 1) >= 2;
+    WHERE (array_length(regexp_split_to_array(nationality, '\s+'), 1) >= 2)
       `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
