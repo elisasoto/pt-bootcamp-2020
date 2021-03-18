@@ -1,20 +1,18 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firestore'
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDrqlOfmObAs9pZJTfV25JDtaH_mwpuHtI",
-    authDomain: "elisa-soto-the-bridge-2020.firebaseapp.com",
-    projectId: "elisa-soto-the-bridge-2020",
-    storageBucket: "elisa-soto-the-bridge-2020.appspot.com",
-    messagingSenderId: "612651002700",
-    appId: "1:612651002700:web:06105cea26968800453de9"
-  };
+  apiKey: 'AIzaSyB2dkKSCaR9RkoQShvO9RfRbwh07aY6Hk0',
+  authDomain: 'thebridge-sept-2020.firebaseapp.com',
+  projectId: 'thebridge-sept-2020',
+  storageBucket: 'thebridge-sept-2020.appspot.com',
+  messagingSenderId: '972441414925',
+  appId: '1:972441414925:web:d4b33b942f3eebcf205444',
+};
 
-
-  if(!firebase.apps.lenght){
-    firebase.initializeApp(firebaseConfig)
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
 }
 
-export default firebase
-
+export default firebase;
