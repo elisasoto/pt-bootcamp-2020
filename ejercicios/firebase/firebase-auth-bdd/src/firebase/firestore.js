@@ -1,8 +1,8 @@
 import firebase from "./index";
 
-const vehicles = () => firebase.firestore().collection("vehicles");
+const vehicles = () => firebase.firestore().collection("test");
 
-export const getVehicles = async () => {
+export const getTest = async () => {
   const snapshot = await vehicles().get();
 
   if (snapshot.empty) {

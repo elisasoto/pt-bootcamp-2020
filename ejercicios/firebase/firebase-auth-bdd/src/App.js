@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getVehicles, getVehiclesbyType,getVehiclesbyId } from './firebase/firestore';
+import { getTest, getVehiclesbyType,getVehiclesbyId } from './firebase/firestore';
 
 import firebase from "./firebase";
 
@@ -28,9 +28,9 @@ function App() {
   }, [])
 
   useEffect(() => {
-    //getVehicles();
+    getTest();
     //getVehiclesbyType('car')
-    getVehiclesbyId('EN5Ass4p0ZeUNaWpxEj4').then(console.log)
+    //getVehiclesbyId('EN5Ass4p0ZeUNaWpxEj4').then(console.log)
   }, []);
 
   function handleRegister() {
