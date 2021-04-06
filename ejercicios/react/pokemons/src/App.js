@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { Store } from './store'
 
@@ -14,8 +14,36 @@ import Profile from './pages/pokemonProfile/PokemonProfile'
 import { toLower } from './utils/toLower'
 
 
-
 function App() {
+    async function getPokemon(url) {
+        try {
+            const res = await fetch(url)
+            const pokemonData = await res.json()
+            const results = pokemonData
+    
+            if (
+                pokemonsList.some(
+                    (pokemon) => pokemon.name === results.name
+                )
+            ) {
+                alert('este pokemon ya existe my friend! 😘')
+            } else {
+                setPokemonsList([
+                    ...pokemonsList,
+                    {
+                        name: results.name,
+                        img: results.sprites.front_default,
+                        id: uuidv4(),
+                        base_experience: results.base_experience,
+                        weight: results.weight,
+                        types: results.types,
+                    },
+                ])
+            }
+        } catch (err) {
+            alert('este pokemon no existe crack 😉')
+        }
+    }
     const [character, setCharacter] = useState('')
     const [pokemonsList, setPokemonsList] = useState([
         {
@@ -42,6 +70,15 @@ function App() {
         },
     ])
 
+   // debounce
+   // useEffect(() => {
+     //   const id = setTimeout(()=>{
+       //     const pokemonAPIURL = `https://pokeapi.co/api/v2/pokemon/${character}`
+         //   character && getPokemon(pokemonAPIURL)
+       // }, 1000)
+       // return () => clearTimeout(id)
+    //}, [character])
+    
     
     const handleChange = (event) => {
         setCharacter(toLower(event.target.value))
@@ -49,38 +86,7 @@ function App() {
 
     const handleClickSearch = () => {
         const pokemonAPIURL = `https://pokeapi.co/api/v2/pokemon/${character}`
-        async function getPokemon() {
-            try {
-                const res = await fetch(pokemonAPIURL)
-                const pokemonData = await res.json()
-                const results = pokemonData
-
-                if (
-                    pokemonsList.some(
-                        (pokemon) => pokemon.name === results.name
-                    )
-                ) {
-                    alert('este pokemon ya existe my friend! 😘')
-                } else {
-                    setPokemonsList([
-                        ...pokemonsList,
-                        {
-                            name: results.name,
-                            img: results.sprites.front_default,
-                            id: uuidv4(),
-                            base_experience: results.base_experience,
-                            weight: results.weight,
-                            types: results.types,
-                        },
-                    ])
-                }
-            } catch (err) {
-                alert('este pokemon no existe crack 😉')
-            }
-        }
-
-        getPokemon()
-
+        getPokemon(pokemonAPIURL)
         setCharacter('')
     }
 
