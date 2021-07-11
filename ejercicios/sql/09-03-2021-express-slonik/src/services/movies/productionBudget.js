@@ -1,15 +1,16 @@
-const { getCanadians } = require("../../queries/directors");
+const { productionBudget } = require("../../queries/movies");
 
 module.exports = (db) => async (req, res, next) => {
+  const { less_than } = req.query;
   try {
-    const result = await getCanadians(db);
+    const result = await productionBudget(db, less_than);
 
     if (!result) {
       next(new Error("something went wrong"));
       return;
     }
 
-    const { rows, rowsCount } = result;
+    const { rows } = result;
 
     res.status(200).json({
       success: true,

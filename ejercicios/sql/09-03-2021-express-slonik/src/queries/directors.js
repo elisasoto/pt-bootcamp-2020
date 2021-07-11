@@ -20,7 +20,7 @@ const getQueryname = async (db) => {
     return await db.query(sql`
     SELECT query_name, name, nickname
     FROM directors
-    WHERE name IS NOT NULL
+    WHERE name NOT LIKE '' AND nickname NOT LIKE ''
       `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -33,7 +33,7 @@ const getPicAndName = async (db) => {
     return await db.query(sql`
     SELECT nickname, pic
     FROM directors
-    WHERE nickname > ''
+    WHERE nickname NOT LIKE ''
       `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -46,7 +46,7 @@ const getCanadians = async (db) => {
     return await db.query(sql`
     SELECT query_name, nationality
     FROM directors
-    WHERE nationality = 'Canadiense'
+    WHERE nationality  'Canadiense'
       `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -80,13 +80,14 @@ const isChessPlayer = async (db) => {
   }
 };
 
-
 const getTwoORMoreNat = async (db) => {
   try {
     return await db.query(sql`
-    SELECT query_name, nationality, name
-    FROM directors
-    WHERE (array_length(regexp_split_to_array(nationality, \s), 1) >= 2)
+    SELECT query_name, nationality, name, LENGTH(nationality) - LENGTH(REPLACE(nationality,' ','')) + 1 as nationality_count
+    FROM directors    
+    GROUP BY nationality, query_name, name
+    HAVING LENGTH(nationality) - LENGTH(REPLACE(nationality,' ','')) + 1 > 1
+    ORDER BY nationality_count DESC
       `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -94,9 +95,21 @@ const getTwoORMoreNat = async (db) => {
   }
 };
 
-
-
-
+const getMultipleRoles = async (db) => {
+  try {
+    return await db.query(sql`
+    SELECT query_name, roles, array_length (string_to_array (roles, ','), 1) -1 as count_roles
+    FROM directors
+    WHERE roles NOT LIKE ''
+    GROUP BY query_name, roles
+    HAVING array_length (string_to_array (roles, ','), 1) -1 > 3
+    ORDER BY count_roles DESC
+      `);
+  } catch (error) {
+    console.info("> something went wrong", error.mesage);
+    return null;
+  }
+};
 
 module.exports = {
   getNotEmptyDirectorsName,
@@ -105,5 +118,6 @@ module.exports = {
   getCanadians,
   getBritUS,
   isChessPlayer,
-  getTwoORMoreNat
+  getTwoORMoreNat,
+  getMultipleRoles,
 };

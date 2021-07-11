@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "4b94aa1d-754a-4b18-a25d-ec12d65de5ab",
+		"name": "SQL - movies // March - 2021",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Example Queries",
+			"item": [
+				{
+					"name": "http://localhost:3000/examples/test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/examples/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"examples",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Directors Queries",
+			"item": [
+				{
+					"name": "1. Devuelve el `name` de todos los directores cuyo campo `name` no esté vacío",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/names",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"names"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Devuelve `query_name` y sus correspondientes `nicknames`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/queryname",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"queryname"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Devuelve `pic` y `nickname` de todos aquellos directores que tengan `nickname`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/pic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"pic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen canadiense.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/canadians",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"canadians"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen británico-estadounidense ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/britus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"britus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Devuelve `query_name`, nacionalidad y roles de aquellos directores que sean ajedrecistas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/chessplayer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"chessplayer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7. Devuelve `query_name`, `name` y nacionalidad de aquellos directores que tengan, al menos, dos nacionalidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/doublenationalities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"doublenationalities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8. Devuelve `query_name` y roles de aquellos directores que tengan más de 3 roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/directors/multiroles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"directors",
+								"multiroles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies Queries",
+			"item": [
+				{
+					"name": "9. Devuelve el título de todas las películas cuyo contenido no sea null",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10. Devuelve el título y el `mpaa_rating` de todas las películas cuya valoración `mpaa` no sea null",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/mpaa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"mpaa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11. Devuelve el título, `production_budget` y distribuidora de todas aquellas películas cuyos costes (`production_budget`) hayan sido inferiores a `500000$`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/budget?less_than=500000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"budget"
+							],
+							"query": [
+								{
+									"key": "less_than",
+									"value": "500000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12. Devuelve el título, `major_genre` y `production_budget` de las 10 películas más costosas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/type/:source",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"type",
+								":source"
+							],
+							"variable": [
+								{
+									"key": "source",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "14. Devuelve el título, la distribuidora y el rating imdb de todas las películas cuyo `imdb_rating` no sea null",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/imdb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"imdb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "15. Devuelve el título y `rotten_tomatoes_rating` de las 100 películas menor valoradas según este campo.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/rotten?lower=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"rotten"
+							],
+							"query": [
+								{
+									"key": "lower",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "16. Devuelve el título, `major_genre`, imdb_rating e imdb_votes de las 20 películas mejor valoradas y a la vez con más votos de todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/bestrated?top=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"bestrated"
+							],
+							"query": [
+								{
+									"key": "top",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "17. Devuelve la suma del campo `production_budget` cuyo `mpaa_rating` sea `Not Rated` y el campo título no sea null",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/budget/type/Not Rated",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"budget",
+								"type",
+								"Not Rated"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "18. Devuelve el título y la fecha de todas aquellas películas que serán lanzadas en el futuro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/futuremovies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"futuremovies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "19. Devuelve el título, `us_gross` y fecha de todas aquellas películas lanzadas entre 1950 y 1980",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/release?from=1950&to=1980",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"release"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1950"
+								},
+								{
+									"key": "to",
+									"value": "1980"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "20. Devuelve el título, `us_gross` y `worldwide_gross` de todas aquellas películas donde `us_gross` o `worldwide_gross` sea 0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/gross?gross_value=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"gross"
+							],
+							"query": [
+								{
+									"key": "gross_value",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "21. Devuelve el título y el `us_gross` de las 50 películas con la recaudación en Estados Unidos (`us_gross`) más pobre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/usGross?lower=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"usGross"
+							],
+							"query": [
+								{
+									"key": "lower",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "22. Devuelve el título y `source` de aquellas películas cuyo título empiece por `F`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/findletter/F",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"findletter",
+								"F"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "23. Sony Pictures Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/sonymovies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"sonymovies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Join Queries",
+			"item": []
+		}
+	]
+}

@@ -1,4 +1,4 @@
-const { sql } = require('slonik')
+const { sql } = require("slonik");
 
 // Movies-related queries
 
@@ -28,12 +28,13 @@ const mpaaRating = async (db) => {
   }
 };
 
-const productionBudget = async (db) => {
+const productionBudget = async (db, less_than) => {
   try {
     return await db.query(sql`
     SELECT title, production_budget, distributor
     FROM movies
-    WHERE production_budget < 500000
+    WHERE production_budget < ${less_than}
+    ORDER BY production_budget DESC
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -41,14 +42,14 @@ const productionBudget = async (db) => {
   }
 };
 
-const mostExpensiveMovies = async (db) => {
+const mostExpensiveMovies = async (db, top) => {
   try {
     return await db.query(sql`
     SELECT title, major_genre, production_budget
     FROM movies
     WHERE production_budget IS NOT NULL
     ORDER BY production_budget DESC
-    LIMIT 10
+    LIMIT ${top}
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -56,12 +57,12 @@ const mostExpensiveMovies = async (db) => {
   }
 };
 
-const remake = async (db) => {
+const remake = async (db, source) => {
   try {
     return await db.query(sql`
     SELECT title, source
     FROM movies
-    WHERE source = 'Remake'
+    WHERE source LIKE ${source}
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -80,40 +81,40 @@ const imdbNotNull = async (db) => {
     return null;
   }
 };
-const rottenTomatoes = async (db) => {
+const rottenTomatoes = async (db, lower) => {
   try {
     return await db.query(sql`
     SELECT title, rotten_tomatoes_rating
     FROM movies
     WHERE rotten_tomatoes_rating IS NOT NULL
     ORDER BY rotten_tomatoes_rating ASC 
-    LIMIT 100
+    LIMIT ${lower}
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
     return null;
   }
 };
-const bestRatedMovies = async (db) => {
+const bestRatedMovies = async (db, top) => {
   try {
     return await db.query(sql`
     SELECT title, major_genre, imdb_rating, imdb_votes
     FROM movies
     WHERE imdb_rating IS NOT NULL
     ORDER BY imdb_rating DESC, imdb_votes DESC
-    LIMIT 20
+    LIMIT ${top}
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
     return null;
   }
 };
-const notRatedProdBudget = async (db) => {
+const notRatedProdBudget = async (db, type) => {
   try {
     return await db.query(sql`
     SELECT SUM(production_budget) AS NotRated_ProdBudget
     FROM movies
-    WHERE (title IS NOT NULL) AND (mpaa_rating = 'Not Rated')
+    WHERE (title IS NOT NULL) AND (mpaa_rating = ${type})
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
@@ -125,21 +126,21 @@ const futureMovies = async (db) => {
     return await db.query(sql`
     SELECT title, release_date
     FROM movies
-    WHERE release_date > '2021/03/01'
+    WHERE release_date > CURRENT_DATE
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
     return null;
   }
 };
-const moviesBetween50And80 = async (db) => {
+const releasedMovies = async (db, from, to) => {
   try {
     return await db.query(sql`
     SELECT title, us_gross, EXTRACT(YEAR FROM release_date) AS releaseYr
     FROM movies
     WHERE title IS NOT NULL
     GROUP BY  title, us_gross, release_date
-    HAVING EXTRACT(YEAR FROM release_date) BETWEEN 1950 AND 1980
+    HAVING EXTRACT(YEAR FROM release_date) BETWEEN ${from} AND ${to}
     ORDER BY releaseYr DESC
     `);
   } catch (error) {
@@ -147,45 +148,46 @@ const moviesBetween50And80 = async (db) => {
     return null;
   }
 };
-const usGrossWWGross = async (db) => {
+const usGrossWWGross = async (db, gross_value) => {
   try {
     return await db.query(sql`
     SELECT title, us_gross, worldwide_gross
     FROM movies
-    WHERE (us_gross = 0) AND (worldwide_gross = 0)
+    WHERE (us_gross = ${gross_value}) OR (worldwide_gross = ${gross_value})
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
     return null;
   }
 };
-const lowestUSGross = async (db) => {
+const lowestUSGross = async (db, lower) => {
   try {
     return await db.query(sql`
     SELECT title, us_gross
     FROM movies
-    WHERE us_gross >0
+    WHERE us_gross > 0
     ORDER BY us_gross ASC
-    LIMIT 50
+    LIMIT ${lower}
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
     return null;
   }
 };
-const titleStartsWithF = async (db) => {
+const titleStartsWith = async (db, letter) => {
+  const search = `${letter}%`;
   try {
     return await db.query(sql`
     SELECT title, source
     FROM movies
-    WHERE title LIKE 'F%'
+    WHERE title LIKE ${search}
     `);
   } catch (error) {
     console.info("> something went wrong", error.mesage);
     return null;
   }
 };
-const sonyPicturesMovies= async (db) => {
+const sonyPicturesMovies = async (db) => {
   try {
     return await db.query(sql`
     SELECT distributor, production_budget, creative_type, major_genre
@@ -199,7 +201,19 @@ const sonyPicturesMovies= async (db) => {
 };
 
 module.exports = {
-    allMoviesNotNull, 
-    titleStartsWithF,
-    sonyPicturesMovies, lowestUSGross, usGrossWWGross,moviesBetween50And80,futureMovies, mpaaRating,productionBudget,mostExpensiveMovies, remake, imdbNotNull, rottenTomatoes, bestRatedMovies, notRatedProdBudget
-}
+  allMoviesNotNull,
+  titleStartsWith,
+  sonyPicturesMovies,
+  lowestUSGross,
+  usGrossWWGross,
+  releasedMovies,
+  futureMovies,
+  mpaaRating,
+  productionBudget,
+  mostExpensiveMovies,
+  remake,
+  imdbNotNull,
+  rottenTomatoes,
+  bestRatedMovies,
+  notRatedProdBudget,
+};

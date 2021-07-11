@@ -1,15 +1,16 @@
-const { getCanadians } = require("../../queries/directors");
+const { lowestUSGross } = require("../../queries/movies");
 
 module.exports = (db) => async (req, res, next) => {
+  const { lower } = req.query;
   try {
-    const result = await getCanadians(db);
+    const result = await lowestUSGross(db, lower);
 
     if (!result) {
       next(new Error("something went wrong"));
       return;
     }
 
-    const { rows, rowsCount } = result;
+    const { rows } = result;
 
     res.status(200).json({
       success: true,

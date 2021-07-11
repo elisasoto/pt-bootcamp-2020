@@ -1,23 +1,22 @@
-const { getQueryname } = require('../../queries/directors')
+const { getQueryname } = require("../../queries/directors");
 
-module.exports = db => async (req, res, next) => {
-    try {
-  
-      const result = await getQueryname(db)
-  
-      if(!result) {
-        next(new Error('something went wrong'))
-        return
-      }
-  
-      const { rows, rowsCount } = result
-  
-      res.status(200).json({
-        success: true,
-        data: rows,
-        len: rowsCount
-      })
-    } catch(error) {
-      console.info('> something went wrong: ', error.message)
+module.exports = (db) => async (req, res, next) => {
+  try {
+    const result = await getQueryname(db);
+
+    if (!result) {
+      next(new Error("something went wrong"));
+      return;
     }
+
+    const { rows } = result;
+
+    res.status(200).json({
+      success: true,
+      len: rows.length,
+      data: rows,
+    });
+  } catch (error) {
+    console.info("> something went wrong: ", error.message);
   }
+};
