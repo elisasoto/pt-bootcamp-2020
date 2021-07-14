@@ -531,7 +531,301 @@
 		},
 		{
 			"name": "Join Queries",
-			"item": []
+			"item": [
+				{
+					"name": "24. Devuelve `query_name`, `production_budget` y distribuidora de los que trabajen juntos y cuya distribuidora no sea null",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/movies/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"movies",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "25. Devuelve `query_name` y el total de películas que cada director ha dirigido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/directors/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"directors",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "26. Devuelve `query_name`, título e `imdb_votes` de las 50 películas menos votadas según `imdb_votes`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/imdb/?type=lower&limit=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"imdb",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "lower"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "27. Devuelve `query_name` y distribuidora donde el director sea `Christopher Nolan`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/director/Spielberg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"director",
+								"Spielberg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "28. Devuelve el nombre y la recaudación en Estados Unidos del director que más ha recaudado en Estados Unidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/top-profit/director",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"top-profit",
+								"director"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "29. Devuelve el nombre y fecha del director que más películas haya lanzado desde el año 2000 hasta la actualidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/most-movies/director/?from=2011/01/01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"most-movies",
+								"director",
+								""
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2011/01/01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "30. Devuelve el nombre, `major_genre` y `rotten_tomatoes_rating` de todos los directores que hayan hecho películas de drama y cuya puntuación en `rotten_tomatoes_rating` sea mayor de 70",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/directors/?genre=Horror&rotten_rating=70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"directors",
+								""
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "Horror"
+								},
+								{
+									"key": "rotten_rating",
+									"value": "70"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "31. Devuelve el nombre de los directores australianos que hayan dirigido alguna película antes de 1995",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/background/?nationality=Canadiense&before=2000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"background",
+								""
+							],
+							"query": [
+								{
+									"key": "nationality",
+									"value": "Canadiense"
+								},
+								{
+									"key": "before",
+									"value": "2000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "32. Devuelve el nombre de los directores, título, fecha y `mpaa_rating` de las películas cuyo `mpaa_rating` sea `PG-13`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/mpaa/PG",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"mpaa",
+								"PG"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "33. Devuelve el quinto mejor director canadiense que haya obtenido la mejor media de `imdb_rating`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/best-canadian",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"best-canadian"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "34. Devuelve la media de las 20 mejores películas de ficción contemporánea entre 1990 y el 2000 según `rotten_tomatoes_rating` e `imdb_rating`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/top-rated/?limit=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"top-rated",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "35. Devuelve los nombre de los directores y las fechas solo en años de películas basadas en juegos que hayan recaudado menos de `500000$`",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/all/based-on-game",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"all",
+								"based-on-game"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

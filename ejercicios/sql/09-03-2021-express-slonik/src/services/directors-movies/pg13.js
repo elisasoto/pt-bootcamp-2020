@@ -1,11 +1,9 @@
-
-const { remake } = require("../../queries/movies");
+const { pg13 } = require("../../queries/directors-movies");
 
 module.exports = (db) => async (req, res, next) => {
-  const { source } = req.params;
-  console.log(source);
+  const { mpaa } = req.params;
   try {
-    const result = await remake(db, source);
+    const result = await pg13(db, mpaa);
 
     if (!result) {
       next(new Error("something went wrong"));

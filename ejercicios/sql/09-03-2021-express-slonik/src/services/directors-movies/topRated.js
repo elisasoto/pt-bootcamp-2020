@@ -1,11 +1,9 @@
-
-const { remake } = require("../../queries/movies");
+const { bestRottenAndImdb } = require("../../queries/directors-movies");
 
 module.exports = (db) => async (req, res, next) => {
-  const { source } = req.params;
-  console.log(source);
+  const { limit } = req.query;
   try {
-    const result = await remake(db, source);
+    const result = await bestRottenAndImdb(db, limit);
 
     if (!result) {
       next(new Error("something went wrong"));
